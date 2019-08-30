@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Color Space Conversions</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1 class="title">Color Space Conversions</h1>
+		</header>
+		<template id="template">
+			<tr>
+				<td class="def tool" data-tip=""></td>
+				<td class="vl0" onclick="copyToClip((this.id = nextNum()))"></td>
+				<td class="vl1" onclick="copyToClip((this.id = nextNum()))"></td>
+				<td class="vl2" onclick="copyToClip((this.id = nextNum()))"></td>
+				<td class="cc ccBlk ccLeft"></td>
+				<td class="cc ccWh"></td>
+			</tr>
+		</template>
+		<template id="table-reset">
+			<tr>
+				<th>Default</th>
+				<th class="tool" data-tip="click to copy">RGB Value</th>
+				<th class="tool" data-tip="click to copy">HEX Value</th>
+				<th class="tool" data-tip="click to copy">HSL Value</th>
+				<th class="cc ccLeft tool" data-tip="contrast ratio">Black</th>
+				<th class="cc tool" data-tip="contrast ratio">White</th>
+			</tr>
+		</template>
+		<main>
+			<textarea id="textarea" rows="10"></textarea>
+			<button onclick="submit()">Submit</button>
+			<table id="table" data-toggle>
+				<tr>
+					<th>Default</th>
+					<th class="tool" data-tip="click to copy">RGB Value</th>
+					<th class="tool" data-tip="click to copy">HEX Value</th>
+					<th class="tool" data-tip="click to copy">HSL Value</th>
+					<th class="cc ccLeft tool" data-tip="contrast ratio">Black</th>
+					<th class="cc tool" data-tip="contrast ratio">White</th>
+				</tr>
+			</table>
+			<button id="btnEXPORT" data-hidden data-hide="true">Export JSON</button>
+		</main>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
