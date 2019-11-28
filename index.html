@@ -4,49 +4,45 @@
 		<meta charset="UTF-8">
 		<title>Color Space Conversions</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
 		<link rel="stylesheet" href="./css/style.css">
 	</head>
 	<body>
-		<header>
-			<h1 class="title">Color Space Conversions</h1>
-		</header>
+		<h1 class="title">color space conversions</h1>
 		<template id="template">
 			<tr>
-				<td class="def tool" data-tip=""></td>
-				<td class="vl0" onclick="copyToClip((this.id = nextNum()))"></td>
-				<td class="vl1" onclick="copyToClip((this.id = nextNum()))"></td>
-				<td class="vl2" onclick="copyToClip((this.id = nextNum()))"></td>
-				<td class="cc ccBlk ccLeft"></td>
-				<td class="cc ccWh"></td>
+				<td class="def" data-tip=""></td>
+				<td data-rgb=""></td>
+				<td data-hex=""></td>
+				<td data-hsl=""></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</template>
 		<template id="table_reset">
 			<tr>
-				<th>Default</th>
-				<th class="tool" data-tip="click to copy">RGB Value</th>
-				<th class="tool" data-tip="click to copy">HEX Value</th>
-				<th class="tool" data-tip="click to copy">HSL Value</th>
-				<th class="cc ccLeft tool" data-tip="contrast ratio">Black</th>
-				<th class="cc tool" data-tip="contrast ratio">White</th>
+				<th></th>
+				<th data-tip="click to copy">RGB</th>
+				<th data-tip="click to copy">HEX</th>
+				<th data-tip="click to copy">HSL</th>
+				<th data-tip="contrast ratio">Black</th>
+				<th data-tip="contrast ratio">White</th>
 			</tr>
 		</template>
 		<main>
 			<textarea id="textarea" rows="10"></textarea>
-			<button onclick="submit()">Submit</button>
-			<table id="table" data-toggle>
+			<button id="button">Submit</button>
+			<table id="table" data-toggle="data-toggle">
 				<tr>
-					<th>Default</th>
-					<th class="tool" data-tip="click to copy">RGB Value</th>
-					<th class="tool" data-tip="click to copy">HEX Value</th>
-					<th class="tool" data-tip="click to copy">HSL Value</th>
-					<th class="cc ccLeft tool" data-tip="contrast ratio">Black</th>
-					<th class="cc tool" data-tip="contrast ratio">White</th>
+					<th></th>
+					<th data-tip="click to copy">RGB</th>
+					<th data-tip="click to copy">HEX</th>
+					<th data-tip="click to copy">HSL</th>
+					<th data-tip="contrast ratio">Black</th>
+					<th data-tip="contrast ratio">White</th>
 				</tr>
 			</table>
-			<button id="btnEXPORT" data-hidden data-hide="true">Export JSON</button>
+			<button id="btnEXPORT" data-hidden="data-hidden" data-hide="true">Export JSON</button>
 		</main>
-		<script src="./js/conversions.js"></script>
 		<script src="./js/index.js"></script>
 	</body>
 </html>
