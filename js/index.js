@@ -230,8 +230,10 @@ const copyObj = {
 
 table.addEventListener("click", (e) => {
   if (e.target && e.target.nodeName == "TD") {
-    copyObj.copyAnim(e.target.id)
-    copyObj.copyText(e.target.textContent);
+    if (!!e.target.id) {
+      copyObj.copyAnim(e.target.id)
+      copyObj.copyText(e.target.textContent);
+    } 
   }
 }, false);
 
